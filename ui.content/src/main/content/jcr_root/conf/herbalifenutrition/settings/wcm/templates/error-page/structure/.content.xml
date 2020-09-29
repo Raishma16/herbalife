@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:template="/conf/herbalifenutrition/settings/wcm/templates/general-content-"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:uuid="bda81869-ce82-47a5-9097-ae59b6e5572a"
+        sling:resourceType="herbalifenutrition/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="herbalifenutrition/components/structure/header">
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="herbalifenutrition/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/herbalifenutrition/emea/en_gb"
+                    skipNavigationRoot="true"
+                    structureDepth="2"/>
+            </header>
+            <responsivegrid
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="herbalifenutrition/components/structure/footer">
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="herbalifenutrition/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/herbalifenutrition/emea/en_gb/footer-pages"
+                    skipNavigationRoot="true"
+                    structureDepth="1"/>
+            </footer>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}650"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

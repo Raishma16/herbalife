@@ -1,0 +1,11 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.css @ categories='herbalife-nutrition.socialmediafeed'}"/>
+<div class="iframe-container" data-sly-use.socialMediaFeed="com.herbalife.nutrition.sites.core.models.SocialMediaFeed"
+ 	data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${!socialMediaFeed.empty}">
+    <iframe scrolling='no' src='${socialMediaFeed.FBFeedPluginURL}' gesture="media" allow="encrypted-media">
+	</iframe>
+</div>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>
+
+

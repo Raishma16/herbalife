@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="et"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <fragments.button.more.details
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Veel infot"/>
+    <fragments.button.more.details.articles
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Veel infot"/>
+    <fragments.button.read.more
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Loe lisaks"/>
+    <fragments.button.shop.now
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Mine kohe ostma"/>
+    <fragments.product.text.featured
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="esiletõstetud retseptid"/>
+    <fragments.product.text.overview
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="toote ülevaade"/>
+    <fragments.product.text.related
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="koos ostetud"/>
+    <fragments.recipe.text.cook.time
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Valmistusaeg"/>
+    <fragments.recipe.text.ingredients
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Koostisained"/>
+    <fragments.recipe.text.method
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Meetod"/>
+    <fragments.recipe.text.nutrients
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Toitaineid portsjonis"/>
+    <fragments.recipe.text.nutrients.calories
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Energia"/>
+    <fragments.recipe.text.nutrients.carbohydrates
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Süsivesikud"/>
+    <fragments.recipe.text.nutrients.fat
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Rasv"/>
+    <fragments.recipe.text.nutrients.fiber
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Rasv"/>
+    <fragments.recipe.text.nutrients.protein
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Valk"/>
+    <fragments.recipe.text.nutrients.serving
+        jcr:primaryType="sling:MessageEntry"
+        sling:message=" Portsjoni kohta"/>
+    <fragments.recipe.text.nutrients.sugar
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Suhkrud"/>
+    <fragments.recipe.text.prep.time
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Valmistusaeg"/>
+    <fragments.recipe.text.serves
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Portsjoneid"/>
+    <fragments.recipe.text.time.minutes
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Minutit"/>
+    <fragments.text.author
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Autor"/>
+    <fragments.text.price
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Hind"/>
+    <fragments.text.sku
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="SKU"/>
+    <hrbl.button.find.member
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Otsi Sõltumatu Partner"/>
+    <hrbl.button.member.login
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Partneri sisselogimine"/>
+    <hrbl.text.information
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Informatsioon"/>
+</jcr:root>

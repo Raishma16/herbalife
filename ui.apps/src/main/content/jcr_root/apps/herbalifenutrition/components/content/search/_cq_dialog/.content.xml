@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Search Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <contentFragmentSearchPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Content Fragment Search Path"
+                                        name="./contentFragmentSearchPath"
+                                        rootPath="/content/dam/regional/apac"/>
+                                    <categoryTagNames
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                        fieldDescription="Tags for filtering the search results"
+                                        fieldLabel="Category Tags"
+                                        multiple="{Boolean}true"
+                                        name="./categoryTagNames"/>
+                                    <suggestionsLimit
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldLabel="Suggestions Limit"
+                                        name="./suggestionsLimit"
+                                        step="1"
+                                        value="5"/>
+                                </items>
+                            </column>
+                        </items>
+                    </general>
+                    <advanced
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <enableDocumentSearch
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./enableDocumentSearch"
+                                        text="Enable Document Search"
+                                        value="true"/>
+                                    <documentSearchPath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Document Search Path"
+                                        name="./documentSearchPath"
+                                        rootPath="/content/dam/regional"/>
+                                    <showCategoryFilter
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./showCategoryFilter"
+                                        text="Show Category Filter"
+                                        value="true"/>
+                                    <showPagination
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./showPagination"
+                                        text="Show Pagination"
+                                        value="true"/>
+                                    <paginationLimit
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                        fieldLabel="Pagination Limit"
+                                        name="./paginationLimit"
+                                        step="1"
+                                        value="10"/>
+                                </items>
+                            </column>
+                        </items>
+                    </advanced>
+                    <labels
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Labels"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <searchResultsText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Example: Search results for &quot;&lt;search-term>&quot;"
+                                        fieldLabel="Search Results Text"
+                                        name="./searchResultsText"
+                                        value="Search results for &quot;&lt;search-term>&quot;"/>
+                                    <totalResultsText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Example: Showing &lt;total> results"
+                                        fieldLabel="Total Results Text"
+                                        name="./totalResultsText"
+                                        value="Showing &lt;total> results"/>
+                                    <resultsRangeText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Example: Showing results &lt;range> of &lt;total>"
+                                        fieldLabel="Results Range Text"
+                                        name="./resultsRangeText"
+                                        value="Showing results &lt;range> of &lt;total>"/>
+                                    <noResultsText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="No results found"
+                                        fieldLabel="No Results Found Text"
+                                        name="./noResultsText"
+                                        value="No results found"/>
+                                    <searchFieldPlaceholder
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Search.."
+                                        fieldLabel="Search Field Placeholder"
+                                        name="./searchFieldPlaceholder"
+                                        value="Search.."/>
+                                    <searchButtonLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Search"
+                                        fieldLabel="Search Button Label"
+                                        name="./searchButtonLabel"
+                                        value="Search"/>
+                                    <filterOptionsLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Filter Options"
+                                        fieldLabel="Filter Options Label"
+                                        name="./filterOptionsLabel"
+                                        value="Filter Options"/>
+                                    <contentTypeLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Type"
+                                        fieldLabel="Content Type Label"
+                                        name="./contentTypeLabel"
+                                        value="Type"/>
+                                    <pagesLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Pages"
+                                        fieldLabel="Pages Label"
+                                        name="./pagesLabel"
+                                        value="Pages"/>
+                                    <documentsLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Documents"
+                                        fieldLabel="Documents Label"
+                                        name="./documentsLabel"
+                                        value="Documents"/>
+                                    <categoryLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="Category"
+                                        fieldLabel="Category Label"
+                                        name="./categoryLabel"
+                                        value="Category"/>
+                                </items>
+                            </column>
+                        </items>
+                    </labels>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

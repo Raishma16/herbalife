@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/herbalifenutrition/components/structure/page/cq:dialog/content/items/tabs/items/seo/rep:policy"/>
+
+    <filter root="/conf/herbalifenutrition" mode="replace">
+    	<exclude pattern="/conf/herbalifenutrition/settings/cloudconfigs(/.*)?"/>
+    </filter>
+    <filter root="/content/herbalifenutrition" mode="merge"/>
+</workspaceFilter>

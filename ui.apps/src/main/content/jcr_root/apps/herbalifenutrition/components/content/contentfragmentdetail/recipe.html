@@ -1,0 +1,54 @@
+<template data-sly-template.detailModel="${@ recipeModel='The content fragment'}">
+    <div class="recipe-detail"> 
+        <h1>${recipeModel.title}</h1>
+        <div data-sly-test="${recipeModel.author != null}" class="author"> 
+            <b>${'fragments.text.author' @ i18n }:</b> ${recipeModel.author}
+        </div>
+        <img src="${recipeModel.image @ context='uri'}" alt="${recipeModel.altText}" data-trackable="true" data-asset-id="${recipeModel.assetUuid}"/>
+        <div class="description">
+            ${recipeModel.longDescription @ context='html'}
+        </div>
+        <div class="extra-info">
+            <span data-sly-test="${recipeModel.serves != null}">${'fragments.recipe.text.serves' @ i18n }: ${recipeModel.serves}<br/></span>
+            <span data-sly-test="${recipeModel.prepTime != null}">${'fragments.recipe.text.prep.time' @ i18n }: ${recipeModel.prepTime} ${'fragments.recipe.text.time.minutes' @ i18n }<br/></span>
+            <span data-sly-test="${recipeModel.cookTime != null}">${'fragments.recipe.text.cook.time' @ i18n }: ${recipeModel.cookTime} ${'fragments.recipe.text.time.minutes' @ i18n }<br/></span>
+        </div>
+        <div class="ingredients">
+            <h5>${'fragments.recipe.text.ingredients' @ i18n }:</h5>
+            <ul data-sly-list.ingredient="${recipeModel.ingredients}">
+                <li>${ingredient}</li>
+            </ul>
+        </div>
+        <div class="preparation">
+            <h5>${'fragments.recipe.text.method' @ i18n }:</h5>
+            ${recipeModel.preparation @ context='html'}
+        </div>
+        <div class="nutrients"
+             data-sly-test="${recipeModel.serves != null || recipeModel.fat != null || recipeModel.carbohydrates != null ||
+                    recipeModel.sugar != null || recipeModel.fiber != null || recipeModel.protein != null}">
+            <h5>${'fragments.recipe.text.nutrients' @ i18n }:</h5>
+            <table>
+                <tr>
+                    <td></td>
+                    <td data-sly-test="${recipeModel.calories != null}">${'fragments.recipe.text.nutrients.calories' @ i18n } (kcal)</td>
+                    <td data-sly-test="${recipeModel.fat != null}">${'fragments.recipe.text.nutrients.fat' @ i18n } (g)</td>
+                    <td data-sly-test="${recipeModel.carbohydrates != null}">${'fragments.recipe.text.nutrients.carbohydrates' @ i18n } (g)</td>
+                    <td data-sly-test="${recipeModel.sugar != null}">${'fragments.recipe.text.nutrients.sugar' @ i18n } (g)</td>
+                    <td data-sly-test="${recipeModel.fiber != null}">${'fragments.recipe.text.nutrients.fiber' @ i18n } (g)</td>
+                    <td data-sly-test="${recipeModel.protein != null}">${'fragments.recipe.text.nutrients.protein' @ i18n } (g)</td>
+                </tr>
+                <tr>
+                    <td>${'fragments.recipe.text.nutrients.serving' @ i18n }</td>
+                    <td data-sly-test="${recipeModel.calories != null}">${recipeModel.calories}</td>
+                    <td data-sly-test="${recipeModel.fat != null}">${recipeModel.fat}</td>
+                    <td data-sly-test="${recipeModel.carbohydrates != null}">${recipeModel.carbohydrates}</td>
+                    <td data-sly-test="${recipeModel.sugar != null}">${recipeModel.sugar}</td>
+                    <td data-sly-test="${recipeModel.fiber != null}">${recipeModel.fiber}</td>
+                    <td data-sly-test="${recipeModel.protein != null}">${recipeModel.protein}</td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div class="annotations">${recipeModel.annotations @ context='html'}</div>
+    </div>
+</template>

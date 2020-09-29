@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:copyright="[© 2019 Herbalife International of America\, Inc. No reproduction in whole or in part without written permission. All Rights Reserved. All trademarks and product images exhibited on this site\, unless otherwise indicated\, are the property of Herbalife International\, Inc.]"
+    jcr:description="Page footer with social media navigation"
+    jcr:primaryType="cq:Component"
+    jcr:title="Page Footer"
+    componentGroup="Herbalife Nutrition Structure"/>

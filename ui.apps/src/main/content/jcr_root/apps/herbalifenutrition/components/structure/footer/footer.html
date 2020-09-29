@@ -1,0 +1,54 @@
+<!--/* Herbalife Nutrition Footer Component*/-->
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.footerModel="com.herbalife.nutrition.sites.core.models.FooterModel"
+     data-sly-call="${clientlib.all @ categories='herbalife-nutrition.footer'}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+<footer class="hrbl-footer">
+    <div class="container">
+        <div class="footer-logo">
+            <a class="logo" href="${currentStyle.rootPath @ extension='html'}"><img src="${currentStyle.logoPath @ extension='png'}"></a>
+        </div>
+        <div class="footer-text">
+            <div class="copyright-text">
+                ${footerModel.copyrightText @ context = 'html'}
+            </div>
+            <ul class="logo-links" data-sly-list.legalImage="${footerModel.legalImages}">
+                <li>
+                    <img src="${legalImage @ context = 'uri'}">
+                </li>
+            </ul>
+        </div>
+        <div class="footer-links">
+            <h5>${'hrbl.text.information' @ i18n }</h5>
+            <div class="social-content">
+                <ul>
+                    <li data-sly-test="${footerModel.facebook}">
+                        <a href="${footerModel.facebook @ context = 'uri'}" target="_blank">
+                            <i class="icon-facebook-fl-1"></i>
+                        </a>
+                    </li>
+                    <li data-sly-test="${footerModel.twitter}">
+                        <a href="${footerModel.twitter @ context = 'uri'}" target="_blank">
+                            <i class="icon-twitter-fl-1"></i>
+                        </a>
+                    </li>
+                    <li data-sly-test="${footerModel.instagram}">
+                        <a href="${footerModel.instagram @ context = 'uri'}" target="_blank">
+                            <i class="icon-instagram-ln-1"></i>
+                        </a>
+                    </li>
+                    <li data-sly-test="${footerModel.youtube}">
+                        <a href="${footerModel.youtube @ context = 'uri'}" target="_blank">
+                            <i class="icon-youtube-fl-2"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="navigation">
+                <div class="cmp-navigation--footer" id="footer-navbar" data-sly-resource="${'navigation' @ resourceType='herbalifenutrition/components/structure/navigation'}"></div>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+</footer>

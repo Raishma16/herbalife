@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/herbalifenutrition"/>
+    <filter root="/apps/sling"/>
+    <filter root="/apps/herbalifenutrition/install"/>
+    <filter root="/apps/wcm/foundation/components/basicpage/v1/basicpage/tabs"/>
+    <filter root="/bin/herbalifenutrition"/>
+</workspaceFilter>

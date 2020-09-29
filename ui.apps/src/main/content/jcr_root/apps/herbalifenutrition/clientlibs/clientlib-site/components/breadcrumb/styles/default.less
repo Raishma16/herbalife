@@ -1,0 +1,61 @@
+/* Start of Herbalife Nutrition Breadcrumb */
+/* Herbalife Nutrition Breadcrumb */
+.cmp-breadcrumb {
+       
+	   @media (max-width: @screen-mini) {
+           display:none;
+       }
+       @media (max-width: @screen-small) {
+           display:none;
+       }
+    .cmp-breadcrumb__list {
+	    padding: 12px 12px 0px 12px;
+	    /* margin-bottom: 0px; */
+	    /* margin-top: 30px; */
+	    list-style: none;
+	    border-radius: 0px;
+	    font-size: 14px;
+	    margin: 15px 0;
+        
+       @media (max-width: @screen-medium) {
+           margin-top: 0px;
+       } 
+
+   }
+         
+    .cmp-breadcrumb__item {
+       display: inline-block;
+       padding:10px 0px;
+       text-transform: uppercase;
+          
+       &:before {
+         content:"|";
+         color:#000;
+         padding-right: 2px;
+		 padding-left: 2px;
+       }
+        
+       &:first-child {
+           padding-left: 0;
+           &:before {
+               content: none;
+           }
+       }
+		
+		&--active{
+			color: #999;
+		}
+     }
+      
+     .cmp-breadcrumb__item-link {
+          /*color:  @text-color;*/
+        color:#2257B8 !important;
+        text-decoration:none;
+        //font-weight: 600;
+        &:first {
+            padding-left: 0px;
+        }
+     }
+      
+}
+/* End of Herbalife Nutrition Breadcrumb */

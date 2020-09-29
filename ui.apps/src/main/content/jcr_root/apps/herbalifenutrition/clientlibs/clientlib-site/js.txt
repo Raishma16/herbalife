@@ -1,0 +1,8 @@
+#base=.
+
+components/page/page.js
+components/search/search.js
+components/text/text.js
+components/button/button.js
+components/teaser/teaser.js
+components/stickybanner/stickybanner.js

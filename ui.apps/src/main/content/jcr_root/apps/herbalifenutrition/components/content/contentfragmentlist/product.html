@@ -1,0 +1,38 @@
+<template data-sly-template.detailModel="${@ productModel='The content fragment', apacregion='is apac region'}">
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--product-image" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            <img src="${productModel.image @ context='uri'}" alt="${productModel.altText}" data-trackable="true" data-asset-id="${productModel.assetUuid}">
+        </dd>
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--title-text-link" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            <a href="${productModel.titleLink @ context='uri', extension='html'}">${productModel.title}</a>
+        </dd>
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--sku" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            ${'fragments.text.sku' @ i18n } ${productModel.sku}
+        </dd>
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--price" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+        	<sly data-sly-test.price="${productModel.price != '0'}">
+            	${'fragments.text.price' @ i18n } ${productModel.price}
+            </sly>
+        </dd>
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--button-text-link" data-cmp-contentfragment-element-type="string">
+    	<sly data-sly-test="${productModel.buttonTextLink != null}">
+            <dd class="cmp-contentfragment__element-value">
+                <a href="${productModel.buttonTextLink @ context='uri'}">
+                	<sly data-sly-test="${productModel.buttonLabel == 'SHOP NOW' || productModel.buttonLabel == null}">
+                		${'fragments.button.shop.now' @ i18n }
+                	</sly>
+                	<sly data-sly-test="${productModel.buttonLabel == 'CONTACT A MEMBER'}">
+                		${'fragments.button.contact.member' @ i18n }
+                	</sly>
+                </a>
+            </dd>
+        </sly>
+    </div>
+</template>

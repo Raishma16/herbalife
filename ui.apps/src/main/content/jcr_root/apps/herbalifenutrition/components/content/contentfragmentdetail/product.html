@@ -1,0 +1,55 @@
+<template data-sly-template.detailModel="${@ productModel='The content fragment', apacregion='is apac region'}">
+    <div class="product-detail" data-region = "apac"> 
+        <div class="information product-container">
+            <h1>${productModel.title}</h1>
+            <div class="sku">
+                ${'fragments.text.sku' @ i18n } ${productModel.sku}
+            </div>
+            <sly data-sly-test="${!apacregion}">
+                <div class="image">
+                    <img src="${productModel.image @ context='uri'}" alt="${productModel.altText}" data-trackable="true" data-asset-id="${productModel.assetUuid}"/>
+                </div>
+                <div class="details">
+                    <a href="#product-overview">${'fragments.button.more.details' @ i18n }</a>
+                </div>
+	            <div class="price">
+	                ${'fragments.text.price' @ i18n } ${productModel.price}
+	            </div>
+	            <div class="shop-now">
+	                <a href="${productModel.buttonTextLink @ context='uri'}">${'fragments.button.shop.now' @ i18n }</a>
+	            </div>
+            </sly>
+            <sly data-sly-test="${apacregion}">
+            	<div class="image apac-image">
+                    <img src="${productModel.image @ context='uri'}" alt="${productModel.altText}" data-trackable="true" data-asset-id="${productModel.assetUuid}"/>
+                </div>
+            	<div  class="overview apac-overview">
+                    <div class="price" data-sly-test="${apacregion && productModel.price != '0'}">
+                        ${'fragments.text.price' @ i18n } ${productModel.price}
+                    </div>
+                    <div class="shop-now" data-sly-test="${productModel.buttonTextLink != null}">
+                        <a href="${productModel.buttonTextLink @ context='uri'}">
+                        	<sly data-sly-test="${productModel.buttonLabel == 'SHOP NOW' || productModel.buttonLabel == null}">
+                                ${'fragments.button.shop.now' @ i18n }
+                            </sly>
+                            <sly data-sly-test="${productModel.buttonLabel == 'CONTACT A MEMBER'}">
+                                ${'fragments.button.contact.member' @ i18n }
+                            </sly>
+                        </a>
+                    </div>
+                    <div class="shop-now" data-sly-test="${productModel.buttonTextLink == null && productModel.buttonContactLink != null}">
+                        <a href="${productModel.buttonContactLink @ context='uri'}">${'fragments.button.contact.member' @ i18n }</a>
+                    </div>
+		            <h3>${'fragments.product.text.overview' @ i18n }</h3>
+		            ${productModel.overview @ context='html'}
+		        </div>
+            </sly>
+        </div>
+        <sly data-sly-test="${!apacregion}">
+	        <div  class="overview product-container">
+	            <h3>${'fragments.product.text.overview' @ i18n }</h3>
+	            ${productModel.overview @ context='html'}
+	        </div>
+        </sly>
+    </div>
+</template>

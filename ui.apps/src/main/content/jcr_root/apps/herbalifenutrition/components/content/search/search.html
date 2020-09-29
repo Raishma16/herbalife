@@ -1,0 +1,47 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+	data-sly-call="${clientlib.all @ categories='herbalife-nutrition.search'}"/>
+<form id="search-form" class="cmp-searchresults" action="" role="search" method="get"
+	data-sly-use.search="com.herbalife.nutrition.sites.core.models.Search"
+ 	data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${!search.empty}">
+	<input type="hidden" name="searchTerm" value="${search.searchTerm}"/>
+	<p class="cmp-searchresults__maintitle">${search.titleText}</p>
+   	<p class="cmp-searchresults__searchresultscount">${search.subText}</p>
+    <div class="filter-column" data-sly-test="${properties.enableDocumentSearch == 'true' || properties.showCategoryFilter == 'true'}">
+    	<p class="filter-options">Filter Options</p>
+        <fieldset class="cmp-searchresults__predicate-container" data-sly-test="${properties.showCategoryFilter == 'true'}">
+        	<h5>${properties.categoryLabel}</h5>
+            <div data-sly-list.category="${search.categories}">
+            	<input id="search-category--${category.label}"
+                	type="checkbox" name="category" value="${category.value}"
+                    data-sly-attribute.checked="${category.active}"/>
+                <label for="search-category--${category.label}">${category.label}</label>
+            </div>
+        </fieldset>
+        <fieldset class="cmp-searchresults__predicate-container" data-sly-test="${properties.enableDocumentSearch == 'true'}">
+            <h5>${properties.contentTypeLabel}</h5>
+            <div data-sly-list.contentType="${search.contentTypes}">
+                <input id="search-contentType--${contentType.label}"
+                    type="radio" name="contentType" value="${contentType.value}"
+                    data-sly-attribute.checked="${contentType.active}"/>
+                <label for="search-contentType--${contentType.label}">${contentType.label}</label>
+            </div>
+        </fieldset>
+    </div>
+    <div data-sly-test.results="${search.results}">
+    	<div data-sly-list.result=${results}>
+	    	<div class="cmp-searchresults__searchresult">
+	            <a class="cmp-searchresults__searchresult--title" href="${result.path}">${result.title}</a>
+	            <p class="cmp-searchresults__searchresult--description">${result.description}</p>
+	       	</div>
+	    </div>
+	   	<div class="cmp-searchresults__pagination" data-sly-test="${properties.showPagination == 'true'}" data-sly-list.page="${search.pagination}">
+	        <input id="search-pagination--${page.label}"
+	            type="radio" name="offset" value="${page.offset}"
+	            data-sly-attribute.checked="${page.active}"
+	            data-sly-attribute.disabled="${page.active}"/>
+	        <label for="search-pagination--${page.label}">${page.label}</label>
+	   	</div>
+    </div>
+</form>
+<sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

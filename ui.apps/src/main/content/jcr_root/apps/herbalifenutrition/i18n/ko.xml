@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="ko"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <fragments.button.more.details
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="추가 정보"/>
+    <fragments.button.more.details.articles
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="ព័ត៌មានលម្អិតបន្ថែម"/>
+    <fragments.button.read.more
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="자세히 보기"/>
+    <fragments.button.shop.now
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="지금 쇼핑하기"/>
+    <fragments.product.text.featured
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="특별한"/>
+    <fragments.product.text.overview
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="개요"/>
+    <fragments.product.text.related
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="관련된"/>
+    <fragments.recipe.text.cook.time
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="조리 시간"/>
+    <fragments.recipe.text.ingredients
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="재료"/>
+    <fragments.recipe.text.method
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="방법"/>
+    <fragments.recipe.text.nutrients
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="1회장 제공 영양분"/>
+    <fragments.recipe.text.nutrients.calories
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="칼로리 "/>
+    <fragments.recipe.text.nutrients.carbohydrates
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="탄수화물"/>
+    <fragments.recipe.text.nutrients.fat
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="지방"/>
+    <fragments.recipe.text.nutrients.fiber
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="식이섬유"/>
+    <fragments.recipe.text.nutrients.protein
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="단백질"/>
+    <fragments.recipe.text.nutrients.serving
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="제공 당 "/>
+    <fragments.recipe.text.nutrients.sugar
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="설탕"/>
+    <fragments.recipe.text.prep.time
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="준비시간"/>
+    <fragments.recipe.text.serves
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="제공"/>
+    <fragments.recipe.text.time.minutes
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="분"/>
+    <fragments.text.author
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="작가"/>
+    <fragments.text.price
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="가격"/>
+    <fragments.text.sku
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="품목번호"/>
+    <hrbl.button.find.member
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="멤버 소개받기"/>
+    <hrbl.button.member.login
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="멤버 로그인"/>
+    <hrbl.text.information
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="정보"/>
+</jcr:root>

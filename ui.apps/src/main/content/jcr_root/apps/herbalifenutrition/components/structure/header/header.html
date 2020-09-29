@@ -1,0 +1,46 @@
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.headerModel="com.herbalife.nutrition.sites.core.models.HeaderModel"
+     data-sly-call="${clientlib.all @ categories='herbalife-nutrition.header'}"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
+<link href="https://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.min.css" rel="stylesheet"></link>
+<script src="https://code.jquery.com/ui/1.10.2/jquery-ui.min.js"></script>
+<header class="hrbl-header">
+    <div class="nav-top">
+        <h1>
+            <a id="headerlogo" href="${currentStyle.rootPath @ extension='html'}">
+                <img src="${currentStyle.logoPath @ extension='png'}">
+            </a>
+        </h1>
+        <div class="top-member-links">
+            <ul>
+                <li>
+                    <a id="MemberLoginLink" href="${headerModel.memberLogin @ context = 'uri'}" title="${'hrbl.button.member.login' @ i18n}">${'hrbl.button.member.login' @ i18n}</a>
+                </li>
+                <li>
+                    <a id="findMemberLink" href="${headerModel.findMember @ context = 'uri'}" title="${'hrbl.button.find.member' @ i18n}">${'hrbl.button.find.member' @ i18n}</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="local-select">
+                    <a id="regionLink" href="${headerModel.regionLinks @ context = 'uri'}" title="${headerModel.countryName @ context='text'}"><i class="icon-globe-ln-2"></i>${headerModel.countryName @ context='text'}</a>
+                </li>
+            </ul>
+            <div data-sly-test="${headerModel.enableSearch == 'true'}">
+              <div class="cmp-search">
+    			<form id="search-field-form" class="search-form" action="${headerModel.searchPagePath @ extension = 'html'}" method="get" 
+    				  data-sly-use.search="com.herbalife.nutrition.sites.core.models.Search">
+					<input type="text" placeholder="${headerModel.searchFieldPlaceholder}" name="searchTerm" value="${search.searchTerm}" required />
+                    <input type="hidden" name="contentFragmentSearchPath" value="${headerModel.contentFragmentSearchPath}" />
+                    <div data-sly-list.categoryTagName="${headerModel.categoryTagNames}">
+                    	<input type="hidden" name="categoryTagNames" value="${categoryTagName}" />
+                    </div>
+                    <input type="hidden" name="suggestionsLimit" value="${headerModel.suggestionsLimit}" />
+         			<button type="submit">${headerModel.searchButtonLabel}</button>
+    			</form>
+ 			  </div>
+            </div>
+        </div>
+    </div>
+    <div class="cmp-navigation--header" id="header-navbar" data-sly-resource="${'navigation' @ resourceType='herbalifenutrition/components/structure/navigation'}"></div>
+</header>

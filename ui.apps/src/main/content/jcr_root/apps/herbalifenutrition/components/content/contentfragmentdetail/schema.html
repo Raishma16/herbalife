@@ -1,0 +1,9 @@
+<template data-sly-template.schema="${@ schema='schema for fragment'}">
+    <script id="schema-json" type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "${schema.type @ context='scriptString'}",
+            ${schema.jsonProperties @ context='unsafe'}
+        }
+    </script>
+</template>

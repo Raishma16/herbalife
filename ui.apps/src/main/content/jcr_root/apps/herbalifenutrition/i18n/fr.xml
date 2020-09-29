@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:language="fr"
+    jcr:mixinTypes="[mix:language]"
+    jcr:primaryType="nt:folder">
+    <fragments.button.more.details
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Plus de Détails"/>
+    <fragments.button.more.details.articles
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Plus de Détails"/>
+    <fragments.button.read.more
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Plus d'infos"/>
+    <fragments.button.shop.now
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Achetez maintenant"/>
+    <fragments.product.text.featured
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Recettes à la Une"/>
+    <fragments.product.text.overview
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Aperçu produit"/>
+    <fragments.product.text.related
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Acheté ensemble"/>
+    <fragments.recipe.text.cook.time
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Temps de préparation"/>
+    <fragments.recipe.text.ingredients
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Ingrédients"/>
+    <fragments.recipe.text.method
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Méthode"/>
+    <fragments.recipe.text.nutrients
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Nutriments par portion"/>
+    <fragments.recipe.text.nutrients.calories
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Énergie"/>
+    <fragments.recipe.text.nutrients.carbohydrates
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Carbohydrates"/>
+    <fragments.recipe.text.nutrients.fat
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Graisse"/>
+    <fragments.recipe.text.nutrients.fiber
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Fibre"/>
+    <fragments.recipe.text.nutrients.protein
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Protéines"/>
+    <fragments.recipe.text.nutrients.serving
+        jcr:primaryType="sling:MessageEntry"
+        sling:message=" Par portion"/>
+    <fragments.recipe.text.nutrients.sugar
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Sucres"/>
+    <fragments.recipe.text.prep.time
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Temps prépa."/>
+    <fragments.recipe.text.serves
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Sert"/>
+    <fragments.recipe.text.time.minutes
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="minutes"/>
+    <fragments.text.author
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Auteur"/>
+    <fragments.text.price
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Prix"/>
+    <fragments.text.sku
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Référence"/>
+    <hrbl.button.find.member
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Trouver un Membre"/>
+    <hrbl.button.member.login
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="connexion Membre"/>
+    <hrbl.text.information
+        jcr:primaryType="sling:MessageEntry"
+        sling:message="Information"/>
+</jcr:root>

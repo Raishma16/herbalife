@@ -1,0 +1,45 @@
+<template data-sly-template.contentFragment="${@ fragment='The content fragment', fragmentPath='', wcmmode='WCM mode',template='The page template name', list='Indicates that is coming from a list'}">
+    <article class="cmp-contentfragment ${template}"
+             data-cmp-contentfragment-model="${fragment.type}"
+             data-sly-attribute.data-cmp-contentfragment-path="${fragmentPath}"
+             data-json="${!wcmmode.disabled && fragment.editorJSON}">
+        <sly data-sly-test.isParagraphMode="${fragment.elements.size == 1 && fragment.elements[0].isMultiLine && properties.displayMode == 'singleText'}">
+            <sly data-sly-call="${paragraphs @ fragment=fragment}"></sly>
+        </sly>
+        <sly data-sly-test="${!isParagraphMode}">
+            <sly data-sly-call="${elements @ fragment=fragment, wcmmode=wcmmode, list=list}"></sly>
+        </sly>
+    </article>
+</template>
+
+<!-- This template should not be used/called by the content fragment list component -->
+<template data-sly-template.paragraphs="${@ fragment='The content fragment'}">
+    <div class="cmp-contentfragment__elements">
+        <div data-sly-resource="${'par0' @ resourceType=fragment.gridResourceType}"></div>
+        <div data-sly-list="${fragment.paragraphs}">
+            ${item @ context='html'}
+            <div data-sly-resource="${'par{0}' @ format=itemList.count, resourceType=fragment.gridResourceType}"></div>
+        </div>
+    </div>
+</template>
+
+<template data-sly-template.elements="${@ fragment='The content fragment', wcmmode='WCM mode', list='Indicates that is coming from a list'}">
+    <dl class="cmp-contentfragment__elements${!wcmmode.disabled ? ' cq-dd-contentfragment' : ''}"/>
+    <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+         data-sly-call="${clientlib.all @ categories='herbalife-nutrition.contentfragmentdetail'}"
+         data-sly-use.fragmentDetailModel="${'com.herbalife.nutrition.sites.core.models.FragmentDetailModel' @ fragment=fragment}"/>
+    <sly data-sly-test="${list != 'true'}"
+         data-sly-test.schema="${fragmentDetailModel.schema.isValid}"
+         data-sly-use.schemaTemplate="schema.html"
+         data-sly-call="${schemaTemplate.schema @ schema = fragmentDetailModel.schema}"></sly>
+    <sly data-sly-test="${fragmentDetailModel.isArticleType}">
+        <sly data-sly-use.elementTemplate="article.html" data-sly-call="${elementTemplate.detailModel @ articleModel=fragmentDetailModel.article, apacregion=fragmentDetailModel.apacRegion}"></sly>
+    </sly>
+    <sly data-sly-test="${fragmentDetailModel.isProductType}">
+        <sly data-sly-use.elementTemplate="product.html" data-sly-call="${elementTemplate.detailModel @ productModel=fragmentDetailModel.product, apacregion=fragmentDetailModel.apacRegion}"></sly>
+    </sly>
+    <sly data-sly-test="${fragmentDetailModel.isRecipeType}">
+        <sly data-sly-use.elementTemplate="recipe.html" data-sly-call="${elementTemplate.detailModel @ recipeModel=fragmentDetailModel.recipe, apacregion=fragmentDetailModel.apacRegion}"></sly>
+    </sly>
+    </dl>
+</template>

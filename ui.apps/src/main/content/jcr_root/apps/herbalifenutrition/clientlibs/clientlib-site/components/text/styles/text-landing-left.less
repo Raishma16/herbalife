@@ -1,0 +1,40 @@
+.cmp-text--landing_left {
+
+        /*background-color:@brand-secondary;*/
+        padding: 2em 10em;
+        margin: 1em 0em;
+    	text-align: left;
+    	line-height: 1.5;
+    	color: #4d4d4d;
+
+            blockquote {
+                margin: 0;
+                font-size: 23px;
+                border: none;
+                padding: 14px 0px;
+        		line-height: 1.5;
+        		color: rgb(108, 108, 108);
+            }
+             
+            u {
+                font-family: @font-family-sans-serif;
+        		text-align: center;
+                &:before {
+                border-top: 2px solid @brand-primary;
+                content: '';
+                display: block;
+                width: 80px;
+                }
+            }
+
+            p {
+				text-align: left;
+                line-height: 1.5;
+   			    color: #4d4d4d;        
+            }
+
+        @media (max-width: @screen-small) {
+		padding: 0 @gutter-padding;
+   		 }
+
+}

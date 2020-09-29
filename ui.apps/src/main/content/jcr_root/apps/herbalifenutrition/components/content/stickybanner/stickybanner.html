@@ -1,0 +1,7 @@
+ <!--/* Herbalife Nutrition Sticky Button */-->
+ <div data-sly-use.stickybannermodel="com.herbalife.nutrition.sites.core.models.StickyBannerModel" 
+     data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+     id="top-sticky-banner" class="">
+      <p>${stickybannermodel.message @join =' '} <a href="${stickybannermodel.link @ context='uri'}">${stickybannermodel.label}</a>
+ </div>
+ <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=true}"></sly>

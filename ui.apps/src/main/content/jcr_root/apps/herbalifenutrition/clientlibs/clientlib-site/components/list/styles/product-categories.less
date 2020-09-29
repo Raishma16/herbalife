@@ -1,0 +1,150 @@
+/*Herbalife Nutrition Product Categories List*/
+.cmp-list__product-categories{
+		margin-top:1em; 
+		padding: 0 10px;   
+		& ul{
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.cmp-list{
+		
+		justify-content:center;
+		
+		float:none;
+	    padding:0;
+
+		
+		margin-block-start: 0;
+		margin-block-end: 0;
+		margin-inline-start: 0;
+		margin-inline-end: 0;
+		padding-inline-start: 0; 
+	
+		@media (min-width:@screen-mini){
+			width:100%;
+			display:inline-block;
+	    }
+
+		@media (min-width:@screen-medium){
+			width:100%;
+			display:flex;
+			flex-wrap:wrap;
+	    }
+
+
+    @media (min-width:@screen-mini){	     
+    .cmp-list__item {
+        list-style: none;
+        //float:left;
+        width:auto;
+        margin-bottom:0;
+		margin-left: 2px;
+		
+
+		&::before{
+			content:""; 
+		}
+		
+		&::after{
+			content:"|"; 
+			position:absolute;
+			margin-top:5px;
+		}
+		
+		&:last-child:after{
+			content:"";
+		}
+		
+    }
+    .cmp-list__item-link {
+        font-weight: 400;
+        float:left;
+       // padding: 9px 5px;
+        word-break: break-word;
+        &:hover {
+            background: @brand-secondary;
+        }
+    }
+     
+    .cmp-list__item-title {
+        width:100%;
+        float:left;
+		font-size:14px;
+		text-transform:uppercase;
+    }
+     
+    .cmp-list__item-date {
+        width:100%;
+        float:left;
+        color: @gray-light;
+        font-size: @font-size-small; 
+    }
+	}
+	
+    @media (min-width:@screen-small){	     
+    .cmp-list__item {
+		text-align:center;
+        list-style: none;
+        //float:left;
+        width:auto;
+        margin-bottom:1em;
+
+		&::before{
+			content:""; 
+		}
+		
+		&::after{
+			content:"  |  "; 
+			position:absolute;
+			margin-top:5px;
+		}
+		
+		&:last-child:after{
+			content:"";
+		}
+		
+    }
+    .cmp-list__item-link {
+        font-weight: 400;
+        float:left;
+       // padding: 0.5rem 0.5rem;
+        word-break: break-word; 
+        &:hover {
+            background: @brand-secondary;
+        }
+    }
+     
+    .cmp-list__item-title {
+        width:100%;
+        float:left;
+		font-size:14px;
+		text-transform:uppercase;
+    }
+     
+    .cmp-list__item-date {
+        width:100%;
+        float:left;
+        color: @gray-light;
+        font-size: @font-size-small; 
+    }
+
+	}
+	
+	    @media (min-width:@screen-medium){	     
+	    .cmp-list__item {
+			text-align:center;
+	        list-style: none;
+	        //float:left;
+	        //width:111px;
+            height:60px;
+	        //margin-bottom:1em;
+	
+			&::before{
+				content:""; 
+			}
+		}
+	}
+     
+
+  }  
+}

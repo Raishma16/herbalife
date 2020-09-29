@@ -1,0 +1,290 @@
+/* Start of Herbalife Nutrition Teaser Image with buttons */
+/* Herbalife Nutrition Teaser Image with buttons - button inside */
+.cmp-teaser__image--button-inside {
+		@teaser-height: 260px;
+		@teaser-img-height:  @teaser-height;
+		@teaser-separator:.33%;
+		margin-bottom: 5px;
+		margin-right:@teaser-separator;
+		
+		@media (min-width: @screen-mini) {
+			width:100% !important;
+		}
+		
+		@media (min-width: @screen-small) {
+			//width:32.33% !important;
+			width:33% !important;
+		}
+		
+    .cmp-teaser {
+        position: relative;
+        height:  @teaser-height;
+        max-height:  @teaser-height;
+        overflow: hidden;
+        padding:0px;
+
+		//margin-bottom: 5px;
+		//margin-right: 4px;
+		
+        @media (max-width: @screen-small) {
+            /*width:  @teaser-height;*/
+            width:330px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        } 
+
+		&:hover{
+			.cmp-teaser__image{
+				filter: brightness(100%);
+			}
+		}
+        .cmp-teaser__image {
+            width: 100%;
+            overflow: hidden;
+            padding-top: 0px;
+			-webkit-filter:brightness(80%);
+			filter: brightness(80%);
+    		transition:all .3s ease-in;
+            .cmp-image__image {
+                margin-top: 0px;
+                object-fit: cover;
+                object-position: top;
+                height: @teaser-img-height;
+                width: 100%;
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s; 
+                -o-transition: all .2s;
+                transition: all .25s;
+                height:@teaser-height;
+               // filter: brightness(66%);
+            }
+
+        }
+
+
+        .cmp-teaser__title {
+            font-family: @font-family-serif;
+            width: 93%;
+            text-align: center;
+            /*font-size: @font-size-h3*/
+            font-size: 14px;
+            margin-top: 190px;
+            position: absolute;
+            top: @gutter-padding;
+            padding-left: @gutter-padding;
+          // padding-top: 260px;
+            color: #fff;
+        }
+
+        .cmp-teaser__title-link {
+            /*color: @teaser-dark-color;*/
+            color:#fff;
+
+        }
+
+        .cmp-teaser__description {
+            display: none;
+        }
+
+        /*.cmp-teaser__action-container {
+            position: absolute;
+            bottom: @gutter-padding * 2;
+            left: @gutter-padding;
+        }*/
+
+        .cmp-teaser__action-container {
+            position:relative;
+            display:table;
+            background-color: #77be20;
+            border: 2px solid#78BE20;
+            border-radius: 10px;
+			margin-bottom: 60px;
+            margin-top: -118px;
+            margin-left: auto;
+            margin-right: auto;
+			&:hover{
+			    border: 2px solid #78BE20;
+    			/*transition: border-color .3s ease-in;*/		
+			}
+        }
+
+        .cmp-teaser__action-link {
+            border:none;
+			color: #fff;
+            background-color: transparent;
+            -webkit-transition: all .25s ease-out;
+            -moz-transition: all .25s ease-out;
+            -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+            padding:10px 25px;
+            font-size:14px;
+            font-weight:400;
+            letter-spacing:unset;
+            line-height:1.2;
+        }
+
+        &:hover {
+            .cmp-teaser__action-link {
+                /*color: @teaser-dark-color;*/
+                color:#fff;
+                background-color: #77be20;
+                /*background-color: @brand-primary;*/
+                border-color: 2px solid#78BE20;
+                border-radius: 15px;
+                
+            }
+
+            .cmp-image__image {
+                /*-moz-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);*/
+            }
+        }
+
+            @media (max-width: @screen-medium) {
+ 				margin-left: 0 !important;
+
+                width: 100%;
+                padding: 0;
+				margin-bottom: 5px;
+				margin-right: 4px;
+            		.cmp-teaser__title {
+                        width: 100%;
+                        padding: 0px;
+       				 }
+        		}
+            @media (max-width: @screen-mini) {
+ 				margin-left: 0 !important;
+                margin-right: 0 !important;
+                width: 100%;
+                padding: 0;
+            	margin-bottom: 5px;
+            		.cmp-teaser__title {
+                        width: 100%;
+                        padding: 0px;
+       				 }
+        		}
+    }
+}
+/* Herbalife Nutrition Teaser Image with buttons - button bottom */
+
+.cmp-teaser__image--button-bottom {
+@teaser-height: 400px;
+@teaser-img-height:  @teaser-height;
+    .cmp-teaser {
+        position: relative;
+        /*height:  @teaser-height;
+        max-height:  @teaser-height;*/
+		//height:  400px;
+        //max-height:  400px;
+        overflow: hidden;
+       /* background-color: #ededed;*/
+        padding:@gutter-padding;
+        margin-bottom: @gutter-padding;
+
+        @media (max-width: @screen-small) {
+          //  padding:0px;
+            width:  332px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        } 
+        
+        .cmp-teaser__image {
+            width: 100%;
+            overflow: hidden;
+            padding-top: 0px;
+
+            .cmp-image__image {
+                margin-top: 0px;
+                /*object-fit: cover;*/
+                object-position: top;
+                height: auto;
+                width: 100%;
+                -webkit-transition: all .2s;
+                -moz-transition: all .2s; 
+                -o-transition: all .2s;
+                transition: all .25s;
+            }
+        }
+
+        .cmp-teaser__title {
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 0;
+            position: absolute;
+            top: @gutter-padding;
+            padding-left: @gutter-padding;
+            padding-top: 260px;
+            color: #fff;
+        }
+
+        .cmp-teaser__title-link {
+            color:#fff;
+        }
+
+        .cmp-teaser__description {
+            display: none;
+        }
+
+
+        .cmp-teaser__action-container {
+
+            bottom:0px;
+			background-color: #7AC143;
+   			border: 2px solid #78be20 !important;
+			border-radius: 15px;
+            width: 100%;
+    		margin: 0 auto;
+
+        }
+        .cmp-teaser__action-link {
+
+                Text-transform: uppercase;
+                Color: #ffffff;
+				background-color: #77be20;
+                border: 2px solid #78BE20;
+				border-radius: 15px;
+                Letter-spacing: 0px;
+                Padding: 2px;
+            	margin: 0 auto;
+                display: block;
+                text-align: center;
+            	border:none;
+                font-size: 28px;
+				white-space: pre-line;
+        }
+
+        &:hover {
+            .cmp-teaser__action-link {
+                /*color: @teaser-dark-color;*/
+               /* color:#fff;
+                background-color: #7AC143;
+                /*background-color: @brand-primary;
+                border-color: @brand-primary;*/
+               /* border-radius: 50px;*/
+
+                Color:#ffffff; 
+				background-color: #77be20;
+                border: 2px solid #78BE20;
+				border-radius: 15px;
+
+
+            }
+
+            .cmp-image__image {
+                /*-moz-transform: scale(1.05);
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05);*/
+            }
+        }
+		  @media (max-width: @screen-medium) {
+			
+		 .cmp-teaser__action-link {
+                font-size: 21px;
+        }
+			
+		}
+    }
+}
+/* End of Herbalife Nutrition Teaser Image with buttons */

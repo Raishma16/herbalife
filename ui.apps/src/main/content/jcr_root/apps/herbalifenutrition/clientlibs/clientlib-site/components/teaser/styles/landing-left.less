@@ -1,0 +1,125 @@
+.cmp-teaser--landing_right {
+    background-color: #EEE;
+
+    .cmp-teaser{
+		/*padding: 0 @gutter-padding;*/
+    	position: relative;
+        display: block;
+        //min-height: 420px;
+        text-align: center;
+     	padding:0;
+        max-width: 70em;
+        margin-left: auto;
+        margin-right: auto;
+
+
+    cmp-teaser__content-wrapper{
+        text-align: center;
+    	padding: 40px;
+    	border-top: 4px solid #eee;
+    }
+    .cmp-teaser__title {
+        width: 96%;
+        text-align: center;
+    	font-size: 40px;
+        margin-top: 0;
+        padding-left: 14px;
+    	color: #4d4d4d;
+        font-weight: bold;
+        text-transform: uppercase;  
+    }
+
+    .cmp-teaser__title-link {
+    	color: #fff;
+    }
+    
+    .cmp-teaser__description {
+		max-width: 600px;
+    	margin: 0px auto;
+		text-align:left;
+    	color: #4d4d4d;
+    	font-size: 21px;        
+        line-height: 1.38105;
+
+    }
+    
+    .cmp-teaser__action-link {
+	   /* background-color: @brand-primary;
+	    text-transform: uppercase;
+	    font-size: @font-size-small;
+	    padding: 0.75em 3.5em;
+	    margin-top: .5em;
+	    font-weight: @font-weight-bold;
+	    color: @teaser-dark-color;*/
+        	display: inline-block;
+            padding: .5em 1em;
+            background: #fff;
+            background-color: white;
+            color: #78be20;
+            border: 3px solid #78be20;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            -webkit-transition: .1s linear background;
+            -moz-transition: .1s linear background;
+            -ms-transition: .1s linear background;
+            -o-transition: .1s linear background;
+            transition: .1s linear background;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+            cursor: pointer;
+            text-rendering: optimizeLegibility;
+            clear: both;
+            letter-spacing: .14em;
+            padding: 1.1em 2em 1em;
+            font-size: 1rem;
+            white-space: nowrap;
+	}
+
+    .cmp-teaser__action-link:hover {
+	  color:#fff;
+      background-color:#aae460;  
+	}
+
+    .cmp-teaser__image{
+    width: 100%;
+    position: relative;
+    filter: brightness(100%);
+
+
+    }
+
+
+    @media (max-width: @screen-medium) {
+
+	.cmp-teaser__content-wrapper{
+
+            }
+    .cmp-teaser__title {
+					text-align: center;
+    				text-transform: uppercase;
+                	font-size:30px;
+            }
+
+     .cmp-teaser__description {
+    font-size: 14px;
+    line-height: 21px;
+
+
+    }
+	 	}
+        	@media (max-width: @screen-mini) {
+	.cmp-teaser__content-wrapper{
+            top: -45px;
+            }
+    .cmp-teaser__title {
+
+                	font-size:36px;
+            }
+        }
+
+	}
+}

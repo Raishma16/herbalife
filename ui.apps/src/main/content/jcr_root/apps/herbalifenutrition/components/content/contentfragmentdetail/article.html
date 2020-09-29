@@ -1,0 +1,12 @@
+<template data-sly-template.detailModel="${@ articleModel='The content fragment'}">
+    <div class="article-detail"> 
+        <h1>${articleModel.title}</h1>
+        <div data-sly-test="${articleModel.author != null}" class="author">
+            <b>${'fragments.text.author' @ i18n }:</b> ${articleModel.author}
+        </div>
+        <img src="${articleModel.image @ context='uri'}" alt="${articleModel.altText}" data-trackable="true" data-asset-id="${articleModel.assetUuid} " />
+        <div class="content">
+            ${articleModel.content @ context='html'}
+        </div>
+    </div>
+</template>

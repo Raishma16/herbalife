@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[herbalifenutrition.author.page.seo]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+					<seo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SEO"
+                        cq:showOnCreate="{Boolean}false"
+                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <robots
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Robots configuration"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <robotsdescription
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/text"
+                                                text="By default all pages have index and follow active, check only to deny when required:"
+                                                listOrder="1"/>
+                                            <noindex
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                text="No index"
+                                                name="./robots-noindex"
+                                                renderReadOnly="false"
+                                                showEmptyInReadOnly="true"
+                                                value="noindex"
+                                                listOrder="2"/>
+                                            <nofollow
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                text="No follow"
+                                                name="./robots-nofollow"
+                                                renderReadOnly="false"
+                                                showEmptyInReadOnly="true"
+                                                value="nofollow"
+                                                listOrder="3"/>
+                                        </items>
+                                    </robots>
+                                    <sitemap
+                                        jcr:primaryType="nt:unstructured"
+                                        jcr:title="Sitemap configuration"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/fieldset">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <priority
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                                required="{Boolean}true"
+                                                fieldLabel="Priority"
+                                                name="./sitemap-priority"
+                                                renderReadOnly="false"
+                                                showEmptyInReadOnly="true"
+                                                typeHint="Double"
+                                                min="0.00"
+                                                max="1.00"
+                                                step="0.01"
+                                                listOrder="1"/>
+                                            <exclude
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                text="Exclude"
+                                                name="./sitemap-exclude"
+                                                renderReadOnly="true"
+                                                showEmptyInReadOnly="true"
+                                                listOrder="2"/>
+                                            <excludeType
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                                name="./sitemap-exclude@TypeHint"
+                                                value="Boolean"/>
+                                        </items>
+                                    </sitemap>
+                                </items>
+                            </column>
+                        </items>
+                    </seo>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

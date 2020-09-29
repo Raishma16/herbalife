@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-09-19T15:45:24.887Z"
+        cq:lastModifiedBy="orlandoro@herbalife.com"
+        cq:lastReplicated="{Date}2019-09-19T15:50:58.878Z"
+        cq:lastReplicatedBy="orlandoro@herbalife.com"
+        cq:lastReplicationAction="Activate"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[cq:ReplicationStatus,mix:versionable]"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Herbalife Nutrition Launch Integration"
+        jcr:uuid="3add69ee-9530-4793-8af3-ab61e8dd39d7"
+        sling:resourceType="cq/dtm-reactor/components/conf/page"
+        company="CO091190e73dd349b2960d00e827eff29a"
+        companyLabel="Herbalife"
+        imsConfigId="Adobe Launch"
+        includeProdOnAuthor="{Boolean}false"
+        property="PRc60bc9e92af34e70a94973b3cff30f4f"
+        propertyLabel="Herbalife (Backup)"
+        tagComponentFooter="cq/dtm-reactor/components/scripttag/footer"
+        tagComponentFooterRank="{Long}100"
+        tagComponentHeader="cq/dtm-reactor/components/scripttag/header"
+        tagComponentHeaderRank="{Long}100">
+        <development
+            jcr:primaryType="nt:unstructured"
+            environment="ENca8de37f76d441ec8f939393ff943947"/>
+        <staging
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="false"
+            async_x0040_Typehint="Boolean"
+            enablePollingImporter="false"
+            environment="ENd00e0ec208de4f1e817e8deb3a4df240"
+            libraryUri="//assets.adobedtm.com/launch-ENd00e0ec208de4f1e817e8deb3a4df240-staging.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+        <production
+            jcr:primaryType="nt:unstructured"
+            archive="false"
+            archiveEncrypted="false"
+            async="false"
+            async_x0040_Typehint="Boolean"
+            enablePollingImporter="false"
+            environment="ENa1fb3d1a2f964119b26e49d54e214a6e"
+            libraryUri="//assets.adobedtm.com/launch-ENa1fb3d1a2f964119b26e49d54e214a6e.min.js"
+            useMinified="false"
+            workflow="/var/workflow/models/cloudconfigs/dtm-reactor/library-download"/>
+    </jcr:content>
+</jcr:root>

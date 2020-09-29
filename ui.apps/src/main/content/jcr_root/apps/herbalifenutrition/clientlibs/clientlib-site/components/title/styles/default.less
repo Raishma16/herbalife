@@ -1,0 +1,62 @@
+/* Herbalife Nutrition Title Default style */
+ 
+.cmp-title {
+     
+    h1, h2, h3, h4 {
+        font-family: @font-family-serif;
+    }
+
+   /* h1 {
+        font-size: 48px;
+
+        @media (max-width: @screen-medium) {
+            font-size: @font-size-h1;
+			font-weight:600;
+        }
+    }*/
+
+    h1 {
+	color:@titles-color;
+        @media (min-width: @screen-mini) {
+            font-size: @titles-mobile;
+			font-weight:bold;
+        }
+        @media (min-width: @screen-small) {
+            font-size: @titles-desktop;
+			font-weight:bold;
+        }
+    }
+
+    h2 {
+	color:@titles-color;
+        @media (min-width: @screen-mini) {
+            font-size: @titles-mobile;
+			font-weight:bold;
+        }
+        @media (min-width: @screen-small) {
+            font-size: @titles-desktop;
+			font-weight:bold;
+        }
+    }
+
+	h3 {
+	    color: rgb(81, 81, 81);
+		font-weight: bold;
+		font-style: normal;
+		text-rendering: optimizelegibility;
+		line-height: 1.1;	
+		
+		@media (min-width: @screen-mini) {
+			    font-size: 16px;
+    			margin-bottom: 2px;
+		}
+		
+		@media (min-width: @screen-small) {
+			font-size: 32px;
+		    margin-bottom:0px;	
+		}
+		
+
+	}
+    
+}

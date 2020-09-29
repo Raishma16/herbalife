@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+        xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+        jcr:primaryType="nt:unstructured"
+        jcr:title="Sticky Banner"
+        sling:resourceType="cq/gui/components/authoring/dialog">
+    	<content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+			<items jcr:primaryType="nt:unstructured">
+				<tabs
+					jcr:primaryType="nt:unstructured"
+	                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+	                maximized="{Boolean}true">
+	                <items jcr:primaryType="nt:unstructured">
+	                	<properties
+							jcr:primaryType="nt:unstructured"
+							jcr:title="Properties"
+							sling:resourceType="granite/ui/components/coral/foundation/container"
+							margin="{Boolean}true">
+								<items jcr:primaryType="nt:unstructured">
+									<columns
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+										margin="{Boolean}true">
+										<items jcr:primaryType="nt:unstructured">
+											<column
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/coral/foundation/container">
+												<items jcr:primaryType="nt:unstructured">
+													<short-message
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+														fieldDescription="Short sentence to describe the purpose of the button."
+														fieldLabel="Short Message"
+														name="./shortMessage"/>
+													<link
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="cq/gui/components/coral/common/form/pagefield"
+														fieldDescription="Link to a content page, external URL or page anchor."
+														fieldLabel="Link"
+														name="./link"/>
+													<button-label
+														jcr:primaryType="nt:unstructured"
+														sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+														fieldDescription="label text for the button."
+														fieldLabel="Label"
+														name="./buttonLabel"/>
+												</items>
+											</column>
+										</items>
+									</columns>
+								</items>
+						</properties>
+	                </items>
+				</tabs>
+		</items>
+    </content>
+</jcr:root>

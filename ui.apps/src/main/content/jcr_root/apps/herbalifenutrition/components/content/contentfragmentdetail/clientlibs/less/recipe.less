@@ -1,0 +1,99 @@
+@import "/apps/herbalifenutrition/clientlibs/common/helpers.less";
+@import "/apps/herbalifenutrition/clientlibs/clientlib-site/less/variables.less";
+
+.recipe-detail {
+  font-size: 16px;
+ 	@media (min-width:@screen-mini){
+  			padding-left:50px;
+			padding-right:50px;
+			padding-top:20px;
+			padding-bottom:20px;
+			width:auto;
+    }
+
+    @media (min-width:@screen-small){
+  			padding:20px;
+			width:auto;
+    }
+
+    @media (min-width:@screen-medium){
+			padding:0;
+  			padding-right:20px;
+			width:auto;
+    }
+
+
+
+  h1, h2, h3 {
+    font-weight: 700;
+  }
+
+  img {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .description,
+  .preparation,
+  .annotations {
+    p {
+      line-height: 1.38105;
+      font-size: 16px;
+    }
+  }
+
+  .nutrients {
+	//overflow-x:auto;
+    table {
+      font-size: 14px;
+      width: 100%;
+      border-bottom: solid 1px #aaa;
+	/*Mobile View*/
+		@media only screen and  (max-width: 760px) {
+		
+		td, tr { display: block; }
+		
+		/* Hide table headers (but not display: none;, for accessibility) */
+		
+		thead tr {
+		  position: absolute;
+		  top: -9999px;
+		  left: -9999px;
+		}
+		
+		tr { border: .5px solid black;
+			 width:49.5%;
+			 float:left;
+			
+		 }
+		
+		tr + tr {  }
+		
+		td {
+		  /* make like a "row" */
+		  border: none;
+		  border-bottom: 1px solid #eee;
+		  position: relative;
+		  //padding-left: 50%;
+		  //background-color: #F8D9D5;
+		  text-align: left;
+		}
+		
+		td:before {
+		  content: attr(data-label);
+		  display: inline-block;
+		  line-height: 1.5;
+		  margin-left: -100%;
+		  width: 100%;
+		  white-space: nowrap;
+		}
+		}
+    }
+  }
+}
+
+@media (min-width: @screen-medium) {
+  .recipe-detail {
+ //   width: 620px;
+  }
+}

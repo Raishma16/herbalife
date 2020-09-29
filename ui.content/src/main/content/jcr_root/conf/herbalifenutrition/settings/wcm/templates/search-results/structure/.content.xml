@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:deviceGroups="[/etc/mobile/groups/responsive]"
+        cq:lastModified="{Date}2020-06-06T20:19:53.811+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/conf/herbalifenutrition/settings/wcm/templates/search-results"
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="herbalifenutrition/components/structure/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/responsivegrid">
+            <header_copy
+                jcr:created="{Date}2019-07-11T21:48:50.502-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-11T21:48:50.502-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="herbalifenutrition/components/structure/header">
+                <navigation
+                    jcr:lastModified="{Date}2019-09-25T00:54:16.414-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="herbalifenutrition/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/herbalifenutrition/emea/en_gb"
+                    skipNavigationRoot="true"
+                    structureDepth="2"/>
+            </header_copy>
+            <responsivegrid
+                jcr:created="{Date}2020-06-06T20:18:51.152+05:30"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2020-06-06T20:18:51.152+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/foundation/components/responsivegrid"
+                editable="{Boolean}true">
+                <cq:responsive jcr:primaryType="nt:unstructured"/>
+            </responsivegrid>
+            <footer_copy
+                jcr:created="{Date}2019-07-11T21:49:05.140-05:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-07-11T21:49:05.140-05:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="herbalifenutrition/components/structure/footer">
+                <navigation
+                    jcr:created="{Date}2018-01-29T11:12:04.131+01:00"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2019-09-25T00:58:02.405-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="herbalifenutrition/components/structure/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/herbalifenutrition/emea/en_gb/footer-pages"
+                    skipNavigationRoot="true"
+                    structureDepth="1"/>
+                <text
+                    jcr:created="{Date}2019-03-04T08:19:00.821-06:00"
+                    jcr:description="Rich Text Section"
+                    jcr:lastModified="{Date}2019-07-11T21:49:16.521-05:00"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Text"
+                    sling:resourceType="herbalifenutrition/components/structure/text"
+                    text="&lt;p>©&amp;nbsp;2019 Herbalife International of America, Inc. No reproduction in whole or in part without written permission. All Rights Reserved. All trademarks and product images exhibited on this site, unless otherwise indicated, are the property of Herbalife International, Inc.&lt;/p>&#xd;&#xa;"
+                    textIsRich="true"/>
+                <sharing
+                    jcr:created="{Date}2019-03-04T08:19:00.821-06:00"
+                    jcr:description="Share page on social media"
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Social Media Sharing"
+                    sling:resourceType="herbalifenutrition/components/structure/sharing"/>
+                <list/>
+            </footer_copy>
+        </root>
+        <cq:responsive jcr:primaryType="nt:unstructured">
+            <breakpoints jcr:primaryType="nt:unstructured">
+                <phone
+                    jcr:primaryType="nt:unstructured"
+                    title="Smaller Screen"
+                    width="{Long}650"/>
+                <tablet
+                    jcr:primaryType="nt:unstructured"
+                    title="Tablet"
+                    width="{Long}1200"/>
+            </breakpoints>
+        </cq:responsive>
+    </jcr:content>
+</jcr:root>

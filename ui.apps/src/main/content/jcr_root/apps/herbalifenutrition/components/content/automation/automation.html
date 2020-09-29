@@ -1,0 +1,29 @@
+<!--/* automation.html */-->
+ <div data-sly-use.auto="com.herbalife.nutrition.sites.core.models.Automation"
+ 	data-sly-use.placeholderTemplate="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${!auto.empty}">
+    <p>${auto.message}</p>
+   <div data-sly-test="${auto.done}">
+    	<p>${auto.time}</p>
+    	<p>RESULTS:</p>
+    	<div data-sly-test="${properties.type == 'page'}">
+            <p>No. of page items read: ${auto.totalCount}</p>
+            <p>No. of pages created: ${auto.successCount}</p>
+            <p data-sly-test="${auto.errorList}">Page Error List: </p>
+		</div>
+		<div data-sly-test="${properties.type == 'contentFragment'}">
+			<p>No. of content fragment items read: ${auto.totalCount}</p>
+	    	<p>No. of content fragments created: ${auto.successCount}</p>
+            <p data-sly-test="${auto.errorList}">Content Fragment Error List: </p>
+        </div>
+        <div data-sly-test="${properties.type == 'asset'}">
+            <p>No. of image asset items read: ${auto.totalCount}</p>
+            <p>No. of image assets updated: ${auto.successCount}</p>
+            <p data-sly-test="${auto.errorList}">Image Asset Error List: </p>
+		</div>
+        <ol data-sly-list.item="${auto.errorList}">
+        	<li>${item}</li>
+        </ol>
+    </div>
+ </div>
+ <sly data-sly-call="${placeholderTemplate.placeholder @ isEmpty=!hasContent}"></sly>

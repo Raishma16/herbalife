@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Automation Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <typedropdown
+                        granite:class="cq-dialog-dropdown-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Content Type"
+                        name="./type">
+                        <items jcr:primaryType="nt:unstructured">
+                            <page
+                                jcr:primaryType="nt:unstructured"
+                                text="Pages Without Content"
+                                value="page"/>
+                            <contentfragment
+                                jcr:primaryType="nt:unstructured"
+                                text="Content Fragments"
+                                value="contentFragment"/>
+                            <asset
+                                jcr:primaryType="nt:unstructured"
+                                text="Image Assets"
+                                value="asset"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-dropdown-showhide-target=".showhidetargets"/>
+                    </typedropdown>
+                    <commoncontainer
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <filepath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Source Excel File"
+                                name="./filePath"
+                                rootPath="/content/dam/automation-excel-sheets"/>
+                        </items>
+                    </commoncontainer>
+                    <pagecontainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <rootpagepath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Site Root Page"
+                                name="./rootPagePath"
+                                rootPath="/content/herbalifenutrition/apac"/>
+                            <templatefolderpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Templates Folder"
+                                name="./templateFolderPath"
+                                rootPath="/conf/herbalifenutrition"/>
+                            <metatitlesuffix
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Page Metatitle Suffix"
+                                name="./metaTitleSuffix"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="page"/>
+                    </pagecontainer>
+                    <assetcontainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <assetfolderpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Assets Parent Folder"
+                                name="./assetFolderPath"
+                                rootPath="/content/dam/regional/apac"/>
+                            <contentrequestor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Content Requestor"
+                                name="./contentRequestor"/>
+                            <region
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Region"
+                                name="./region"/>
+                            <locale
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Locale"
+                                name="./locale"/>
+                            <expirydate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                displayedFormat="YYYY-MM-DD HH:mm"
+                                fieldLabel="License Expiry Date"
+                                name="./expiryDate"
+                                type="datetime"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="asset"/>
+                    </assetcontainer>
+                    <cfcontainer
+                        granite:class="showhidetargets"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <cftypedropdown
+                                granite:class="cq-dialog-dropdown-showhide"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Content Fragment Type"
+                                name="./cfType">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <product
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Product"
+                                        value="product"/>
+                                    <article
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Article"
+                                        value="article"/>
+                                    <recipe
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Recipe"
+                                        value="recipe"/>
+                                </items>
+                            </cftypedropdown>
+                            <fragmentmodelpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Content Fragment Model"
+                                name="./fragmentModelPath"
+                                rootPath="/conf/herbalifenutrition/settings/dam/cfm/models"/>
+                            <fragmentsfolderpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Content Fragments Folder"
+                                name="./fragmentsFolderPath"
+                                rootPath="/content/dam/regional/apac"/>
+                            <parentpagepath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Title Link Parent Page"
+                                name="./parentPagePath"
+                                rootPath="/content/herbalifenutrition/apac"/>
+                            <imagefolderpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Images Folder"
+                                name="./imageFolderPath"
+                                rootPath="/content/dam/regional/apac"/>
+                            <roottagpath
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Content Fragment Root Tag"
+                                name="./rootTagPath"
+                                rootPath="/content/cq:tags"/>
+                        </items>
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            showhidetargetvalue="contentFragment"/>
+                    </cfcontainer>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

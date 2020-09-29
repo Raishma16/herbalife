@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-12-03T17:06:27.363-06:00"
+        cq:lastModifiedBy="admin"
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="wcm/core/components/policies/mappings">
+        <root
+            cq:policy="wcm/foundation/components/responsivegrid/content-default"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/core/components/policies/mapping">
+            <responsivegrid
+                cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <herbalifenutrition jcr:primaryType="nt:unstructured">
+                    <components jcr:primaryType="nt:unstructured">
+                        <content jcr:primaryType="nt:unstructured">
+                            <teaser
+                                cq:policy="herbalifenutrition/components/content/teaser/policy_1568299576609"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <contentfragment
+                                cq:policy="herbalifenutrition/components/content/contentfragment/policy_1570149463732"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <list
+                                cq:policy="herbalifenutrition/components/content/list/policy_1563473474150"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <contentfragmentlist
+                                cq:policy="herbalifenutrition/components/content/contentfragmentlist/policy_21505700876461"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                            <button
+                                cq:policy="herbalifenutrition/components/content/button/policy_1563224689885"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </content>
+                    </components>
+                </herbalifenutrition>
+                <wcm jcr:primaryType="nt:unstructured">
+                    <foundation jcr:primaryType="nt:unstructured">
+                        <components jcr:primaryType="nt:unstructured">
+                            <responsivegrid
+                                cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="wcm/core/components/policies/mapping"/>
+                        </components>
+                    </foundation>
+                </wcm>
+            </responsivegrid>
+            <responsivegrid_928220753
+                cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <responsivegrid_43808063
+                cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <responsivegrid jcr:primaryType="nt:unstructured">
+                    <list
+                        cq:policy="herbalifenutrition/components/content/list/policy_1563473474150"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/core/components/policies/mapping"/>
+                </responsivegrid>
+                <responsivegrid_119667009
+                    cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping"/>
+            </responsivegrid_43808063>
+            <responsivegrid_1362471450
+                cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping">
+                <responsivegrid
+                    cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping">
+                    <responsivegrid
+                        cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/core/components/policies/mapping">
+                        <herbalifenutrition jcr:primaryType="nt:unstructured">
+                            <components jcr:primaryType="nt:unstructured">
+                                <content jcr:primaryType="nt:unstructured">
+                                    <contentfragment
+                                        cq:policy="herbalifenutrition/components/content/contentfragment/policy_1570149463732"
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="wcm/core/components/policies/mapping"/>
+                                </content>
+                            </components>
+                        </herbalifenutrition>
+                    </responsivegrid>
+                    <responsivegrid_54206 jcr:primaryType="nt:unstructured">
+                        <list
+                            cq:policy="herbalifenutrition/components/content/list/policy_1563473474150"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="wcm/core/components/policies/mapping"/>
+                    </responsivegrid_54206>
+                    <herbalifenutrition jcr:primaryType="nt:unstructured">
+                        <components jcr:primaryType="nt:unstructured">
+                            <content jcr:primaryType="nt:unstructured">
+                                <contentfragment
+                                    cq:policy="herbalifenutrition/components/content/contentfragment/policy_1570149463732"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <contentfragmentlist
+                                    cq:policy="herbalifenutrition/components/content/contentfragmentlist/policy_21505700876461"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <list
+                                    cq:policy="herbalifenutrition/components/content/list/policy_1563473474150"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <text
+                                    cq:policy="herbalifenutrition/components/content/text/policy_1560362797671"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <title
+                                    cq:policy="herbalifenutrition/components/content/title/policy_1562947702973"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <button
+                                    cq:policy="herbalifenutrition/components/content/button/policy_1563224689885"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                            </content>
+                        </components>
+                    </herbalifenutrition>
+                    <wcm jcr:primaryType="nt:unstructured">
+                        <foundation jcr:primaryType="nt:unstructured">
+                            <components jcr:primaryType="nt:unstructured">
+                                <responsivegrid
+                                    cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                            </components>
+                        </foundation>
+                    </wcm>
+                </responsivegrid>
+                <responsivegrid_1840826989
+                    cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="wcm/core/components/policies/mapping">
+                    <herbalifenutrition jcr:primaryType="nt:unstructured">
+                        <components jcr:primaryType="nt:unstructured">
+                            <content jcr:primaryType="nt:unstructured">
+                                <contentfragment
+                                    cq:policy="herbalifenutrition/components/content/contentfragment/policy_1570149463732"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <contentfragmentlist
+                                    cq:policy="herbalifenutrition/components/content/contentfragmentlist/policy_21505700876461"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <title
+                                    cq:policy="herbalifenutrition/components/content/title/policy_1562947702973"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <text
+                                    cq:policy="herbalifenutrition/components/content/text/policy_1560362797671"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                                <contentfragmentdetail
+                                    cq:policy="herbalifenutrition/components/content/contentfragmentdetail/policy_1575413773273"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                            </content>
+                        </components>
+                    </herbalifenutrition>
+                    <wcm jcr:primaryType="nt:unstructured">
+                        <foundation jcr:primaryType="nt:unstructured">
+                            <components jcr:primaryType="nt:unstructured">
+                                <responsivegrid
+                                    cq:policy="wcm/foundation/components/responsivegrid/policy_1570146133854"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="wcm/core/components/policies/mapping"/>
+                            </components>
+                        </foundation>
+                    </wcm>
+                </responsivegrid_1840826989>
+                <responsivegrid_54206 jcr:primaryType="nt:unstructured">
+                    <list
+                        cq:policy="herbalifenutrition/components/content/list/policy_1563473474150"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/core/components/policies/mapping"/>
+                    <title
+                        cq:policy="herbalifenutrition/components/content/title/policy_1571679263630"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="wcm/core/components/policies/mapping"/>
+                </responsivegrid_54206>
+            </responsivegrid_1362471450>
+            <header
+                cq:policy="herbalifenutrition/components/structure/header/policy_1559687716892"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+            <footer
+                cq:policy="herbalifenutrition/components/structure/footer/policy_1572492089647"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="wcm/core/components/policies/mapping"/>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,25 @@
+<template data-sly-template.detailModel="${@ articleModel='The content fragment'}">
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--title-text-link" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            <a href="${articleModel.titleLink @ context='uri', extension='html'}">${articleModel.title}</a>
+        </dd>
+    </div>
+    <div data-sly-test="${articleModel.author != null}" class="author">
+        <b>${'fragments.text.author' @ i18n }:</b> ${articleModel.author}
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--article-image" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            <img src="${articleModel.image @ context='uri'}" alt="${articleModel.altText}" data-trackable="true" data-asset-id="${articleModel.assetUuid}">
+        </dd>
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--article-description" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            ${articleModel.description @ context='html'}
+        </dd>
+    </div>
+    <div class="cmp-contentfragment__element cmp-contentfragment__element--readmore-text-link" data-cmp-contentfragment-element-type="string">
+        <dd class="cmp-contentfragment__element-value">
+            <a href="${articleModel.readmoreTextLink @ context='uri', extension='html'}">${'fragments.button.more.details.articles' @ i18n }</a>
+        </dd>
+    </div>
+</template>
